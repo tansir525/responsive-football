@@ -47,7 +47,8 @@ nav {
 .nav-links ul li:hover::after {
   width: 100%;
 }
-.fa-bars {
+.fa-bars.navdot {
+  display: none;
   font-size: 25px;
   color: #ffffff;
   display: none;
@@ -315,7 +316,7 @@ footer {
 /*--------------------------------------------- Mobile Devices ----------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 688px) {
-  .fa-bars {
+  .fa-bars.navdot {
     display: block;
   }
   .nav-links ul li {
