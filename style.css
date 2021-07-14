@@ -1,0 +1,350 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 21px;
+  width: 870px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- navigation part--------------------------------------------------------------------- */
+.header {
+  background: #2d25a0;
+}
+nav {
+  padding: 2% 6%;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.fa-bars {
+  font-size: 25px;
+  color: #ffffff;
+  display: none;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- bannar part---------------------------------------------------------------------------- */
+
+.banner-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-left: 130px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.btn {
+  background: #e02c6d;
+
+  padding: 10px 24px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.5s ease;
+  text-decoration: none;
+  margin: 0px 8px;
+  border: none;
+}
+
+.btn::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #2d25a0;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
+.fa-arrow-right {
+  margin: 0px 8px;
+}
+
+.header-pic img {
+  width: 556.01px;
+  height: 438px;
+  margin-right: 141px;
+  margin-top: 153px;
+  margin-bottom: 86px;
+  margin-left: 102px;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- players details section------------------------------------------------------------------ */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.total-players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  row-gap: 27px;
+  column-gap: 30px;
+}
+
+.all-players {
+  padding: 15px;
+  width: 330px;
+  height: 474px;
+  left: 180px;
+  top: 747px;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player img {
+  width: 300px;
+  height: 256px;
+  margin: 16px 0px;
+}
+.player-details h2 {
+  font-size: 28px;
+  line-height: 40px;
+
+  font-feature-settings: "liga" off;
+
+  color: #18191f;
+}
+
+.player-details p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #6c6c6c;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Highlights part -----------------------------------------------------------------------------*/
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-top: 100px;
+  justify-content: center;
+}
+.highilights-details {
+  /* margin-left: 300px; */
+  margin-top: 75px;
+}
+.highilights-details h1 {
+  font-weight: 900px;
+  font-size: 48px;
+  line-height: 60px;
+  color: #0a0826;
+  position: static;
+  width: 469px;
+  height: 120px;
+}
+.highilights-details p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  width: 404px;
+  height: 113px;
+  left: 0px;
+  color: #6c6c6c;
+}
+.highlights-img img {
+  width: 567px;
+  height: 427px;
+  margin-left: 76px;
+}
+/* -----------------------------------------------------------Player Statistics -------------------------------------------------------- */
+.statistics {
+  text-align: center;
+  margin: 40px;
+}
+.photo-album {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+.photo-frame {
+  height: 300px;
+  width: 350px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+}
+.photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+.photo-details {
+  position: absolute;
+  width: 350px;
+
+  top: 0px;
+  padding: 15px;
+  display: none;
+}
+.photo-details h3 {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.photo-details p {
+  color: white;
+}
+.photo-frame:hover .photo-details {
+  display: block;
+  background-color: rgba(110, 157, 172, 0.726);
+}
+.photo-frame:hover .photo {
+  transform: scale(1.5) rotate(380deg);
+  transition: transform 1.8s ease-in-out;
+}
+
+/*--------------------------------------------------------- Moments------------------------------------------------------------------------ */
+.Moment-Name {
+  text-align: center;
+  font-weight: bold;
+}
+.Moments {
+  width: 90%;
+  padding: 20px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.box {
+  width: 250px;
+  margin: 0 10px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.box:hover {
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------ footer part ----------------------------------------------------------------------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 63px;
+  margin-top: 158px;
+  margin-left: 85px;
+}
+.logo img {
+  width: 450.1px;
+  height: 100px;
+}
+.footer-icons {
+  margin-top: 20px;
+  margin-bottom: 1px;
+}
+.icon {
+  color: gray;
+  padding: 5px;
+  background-color: lightgray;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Media Queries--------------------------------------------------------------------------- */
+/*--------------------------------------------- Mobile Devices ----------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 688px) {
+  .fa-bars {
+    display: block;
+  }
+  .nav-links ul li {
+    display: none;
+  }
+  .banner-part {
+    /* flex-wrap: wrap; */
+    display: flex;
+    flex-direction: column;
+  }
+  .total-players {
+    display: flex;
+    flex-direction: column;
+  }
+  .highlights {
+    display: flex;
+    flex-direction: column;
+  }
+  #h-btn {
+    margin-bottom: 35px;
+  }
+  .photo-album {
+    display: flex;
+    flex-direction: column;
+  }
+  .Moments {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+  }
+}
